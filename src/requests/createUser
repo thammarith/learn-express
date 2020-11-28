@@ -1,0 +1,5 @@
+curl --location --request POST 'http://localhost:3000/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "testuser"
+}'
