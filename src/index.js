@@ -6,9 +6,13 @@ const port = 3000;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
 // Get all users
 app.get('/users', (req, res) => {
-  console.log('Getting all users')
+  console.log('Getting all users');
 
   pool
     .query('SELECT * FROM users')
